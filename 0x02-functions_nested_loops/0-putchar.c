@@ -8,7 +8,7 @@ int main(void)
 	char c[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
 	int i;
 
-	for (i = 0; i < 9; i++)
+	for (i = 0; i < 8; i++)
 		_putchar(c[i]);
 	_putchar('\n');
 	return (0);
