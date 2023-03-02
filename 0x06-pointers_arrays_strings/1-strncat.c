@@ -4,7 +4,7 @@
  * @dest: string
  * @src: string
  * @n: number of elements to concatenat
- * Return: pointer to resulting `dest`
+ * Return: `dest`
  */
 
 char *_strncat(char *dest, char *src, int n)
@@ -14,9 +14,9 @@ char *_strncat(char *dest, char *src, int n)
 	for (i = 0; dest[i] != '\0'; i++)
 		;
 
-	for (k = 0; src[k] != '\0' && k > 0; k++, n--, i++)
+	for (k = 0; src[k] != '\0' && k < n; k++)
 	{
-		dest[i] = src[k];
+		dest[i + k] = src[k];
 	}
 	return (dest);
 }
