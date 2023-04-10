@@ -5,12 +5,21 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i;
-	unsigned long int a = (sizeof(unsigned long int) * 8) - 1;
+	unsigned long int a;
+	int sh;
 
-	for (i = a; i >= 0; i--)
+	if (n == 0)
 	{
-		if ((n >> i) & 1)
+		_putchar('0');
+		return;
+	}
+
+	for (a = n, sh = 0; (a >>= 1) > 0; sh++)
+		;
+
+	for (; sh >= 0; sh--)
+	{
+		if ((n >> sh) & 1)
 			_putchar('1');
 		else
 			_putchar('0');
