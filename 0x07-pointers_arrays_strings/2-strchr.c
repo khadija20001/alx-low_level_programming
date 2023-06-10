@@ -10,7 +10,7 @@
  * Return: a pointer to the first occurrence of the character
  */
 
-char *_strchr(char *s, char c)
+/*char *_strchr(char *s, char c)
 {
 	while (*s != '\0')
 	{
@@ -21,5 +21,20 @@ char *_strchr(char *s, char c)
 		s++;
 	}
 
-	return (s + 1);
+	return (s + 1);*/ //we can use the programm bellow also 
+	
 }
+char *_strchr(char *s, char c)
+   {
+           int i;
+         for (i=0;s[i]!='\0';i++)
+           {
+                   if(s[i]==c)
+                  {
+                          s=&s[i];
+                          return s;
+                  }
+          }
+          return &s[i];
+ }
+         
