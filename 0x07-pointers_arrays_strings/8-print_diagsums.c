@@ -31,3 +31,19 @@ void print_diagsums(int *a, int size)
 	}
 	printf("%d\n", sum);
 }
+/*Or we can also use this code :
+
+   void print_diagsums(int *a, int size)
+   {
+           int i=0;
+            int s1=0,s2=0;
+   
+           for(;i<size;i++)
+           {
+                   s1+=a[i*(size+1)];
+                  s2+=a[(i+1)*(size-1)];
+  
+          }
+  printf("%d, %d\n",s1,s2);
+  }
+*/
